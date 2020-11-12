@@ -15,5 +15,9 @@ public class ProjectileMovement : MonoBehaviour
     void Update()
     {
         transform.position += transform.forward * moveSpeed * Time.deltaTime;
+        if (transform.position.y > 12.0f || transform.position.y < -12.0f || transform.position.x > 16.0f || transform.position.x < -16.0f || transform.position.z > 16.0f || transform.position.z < -16.0f)
+        {
+            Destroy(gameObject);
+        }
     }
 }

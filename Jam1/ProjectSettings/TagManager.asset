@@ -7,6 +7,11 @@ TagManager:
   - Ground
   - Death
   - Pickup
+  - Enemy
+  - Bubble
+  - Bugspray
+  - Programmer
+  - Duck
   layers:
   - Default
   - TransparentFX

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class ScoreUI : MonoBehaviour
 {
     public Text scoreValueText;
-
+    public bool asPercentage;
     private int scoreValue;
     public int ScoreValue
     {
@@ -14,7 +14,12 @@ public class ScoreUI : MonoBehaviour
         set 
         {
             scoreValue = value;
-            scoreValueText.text = scoreValue.ToString();
+            if (asPercentage)
+            { scoreValueText.text = " " + scoreValue.ToString() + "%"; }
+            else
+            {
+                scoreValueText.text = scoreValue.ToString();
+            }    
         }
     }
 }
